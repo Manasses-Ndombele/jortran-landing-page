@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Clock, Star, TrendingUp } from 'lucide-react';
 
 const Offer = () => {
   const [timeLeft, setTimeLeft] = useState({
-    hours: 23,
+    hours: 5,
     minutes: 59,
     seconds: 59
   });
@@ -49,11 +49,11 @@ const Offer = () => {
           </h2>
           
           <div className="text-6xl lg:text-8xl font-bold mb-8 text-yellow-300">
-            19.990 Kz
+            23.000 Kz
           </div>
 
           <p className="text-2xl mb-8 font-semibold">
-            Economia de <span className="text-yellow-300">15.010 Kz</span> apenas hoje!
+            Economia de <span className="text-yellow-300">12.000 Kz</span> apenas hoje!
           </p>
 
           {/* Countdown Timer */}

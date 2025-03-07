@@ -16,7 +16,9 @@ const Checkout = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -106,7 +108,7 @@ const Checkout = () => {
               </div>
               <div className="flex justify-between text-xl font-bold text-green-600 mb-4">
                 <span>Preço promocional:</span>
-                <span>19.990 Kz</span>
+                <span>23.000 Kz</span>
               </div>
               <div className="flex justify-between text-lg mb-2">
                 <span>Quantidade:</span>
@@ -115,7 +117,7 @@ const Checkout = () => {
               <div className="flex justify-between text-2xl font-bold text-blue-600 border-t pt-4">
                 <span>Total:</span>
                 <span>
-                  {(19990 * formData.quantity).toLocaleString("pt-AO")} Kz
+                  {(23000 * formData.quantity).toLocaleString("pt-AO")} Kz
                 </span>
               </div>
             </div>
@@ -128,7 +130,7 @@ const Checkout = () => {
               </div>
               <div className="flex items-center space-x-3 text-blue-600">
                 <Truck className="w-5 h-5" />
-                <span className="font-medium">Entrega em 3-5 dias úteis</span>
+                <span className="font-medium">Entrega em menos de 24h</span>
               </div>
               <div className="flex items-center space-x-3 text-orange-600">
                 <CheckCircle className="w-5 h-5" />
@@ -176,21 +178,6 @@ const Checkout = () => {
 
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Seu município *
-                </label>
-                <input
-                  type="text"
-                  name="municipality"
-                  value={formData.municipality}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Seu município"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
                   Bairro *
                 </label>
                 <input
@@ -206,16 +193,15 @@ const Checkout = () => {
 
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Rua/Nº da Casa (opcional)
+                  Descrição
                 </label>
-                <input
-                  type="text"
+                <textarea
                   name="address"
                   value={formData.address}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Rua e número da casa"
-                />
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent h-40"
+                  placeholder="Informe sua rua e referências para chegar na sua loja/casa"
+                ></textarea>
               </div>
 
               <div>
@@ -232,6 +218,12 @@ const Checkout = () => {
                   <option value={2}>2 Câmeras</option>
                   <option value={3}>3 Câmeras</option>
                   <option value={4}>4 Câmeras</option>
+                  <option value={5}>5 Câmeras</option>
+                  <option value={6}>6 Câmeras</option>
+                  <option value={7}>7 Câmeras</option>
+                  <option value={8}>8 Câmeras</option>
+                  <option value={9}>9 Câmeras</option>
+                  <option value={10}>10 Câmeras</option>
                 </select>
               </div>
 
@@ -270,8 +262,9 @@ const Checkout = () => {
               </h4>
               <p className="text-orange-700">
                 Preencha todos os dados corretamente. Caso haja erro nas
-                informações fornecidas que impeça a entrega, será cobrada uma
-                taxa de reenvio.
+                informações fornecidas que dificulte a entrega e um de nossos
+                entregadores já tiver se deslocado será cobrada uma taxa de
+                reenvio.
               </p>
             </div>
           </div>

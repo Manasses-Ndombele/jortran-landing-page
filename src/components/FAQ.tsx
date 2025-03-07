@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronDown, ChevronUp, Shield, Clock, Smartphone, CreditCard } from 'lucide-react';
 
 const FAQ = () => {
@@ -23,7 +23,7 @@ const FAQ = () => {
     {
       icon: <CreditCard className="w-6 h-6" />,
       question: "Preciso pagar antes de receber?",
-      answer: "Não! Você só paga após o produto chegar à sua casa. É nossa garantia de que você vai receber exatamente o que pediu."
+      answer: "Não! Você só paga após o produto chegar à sua loja/casa. Aceitamos os seguintes métodos de pagamentos: transferência por IBAN, transferência por Express e dinheiro em mão."
     }
   ];
 

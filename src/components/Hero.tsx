@@ -13,32 +13,18 @@ const Hero = () => {
           {/* Left Column - Text Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Segurança que{" "}
-              <span className="text-blue-600">Enxerga no Escuro</span> e{" "}
-              <span className="text-orange-500">Ouve sua Casa</span>
+              Se o seu negócio
+              <span className="text-blue-600"> Vale ouro</span> Porquê
+              <span className="text-orange-500"> deixá-lo inseguro?</span>
             </h1>
 
-            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              A câmera inteligente Wi-Fi com visão noturna em cores, áudio
-              bidirecional, sensor de movimento e controle por celular.
+            <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+              Descubra a câmera que está mudando a forma como empreendedores
+              angolanos protegem seus investimentos.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button
-                onClick={scrollToCheckout}
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg"
-              >
-                Quero a Minha Agora
-              </button>
-
-              <div className="flex items-center justify-center lg:justify-start space-x-2 text-green-600 font-semibold">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span>Pague só após receber!</span>
-              </div>
-            </div>
-
             {/* Trust Indicators */}
-            <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-gray-600">
+            <div className="mb-6 flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
                 <span className="text-green-500">✓</span>
                 <span>+1.200 vendidos</span>
@@ -52,6 +38,21 @@ const Hero = () => {
                 <span>Entrega segura</span>
               </div>
             </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <button
+                onClick={scrollToCheckout}
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg"
+              >
+                Quero Comprar Agora
+              </button>
+
+              <div className="flex items-center justify-center lg:justify-start space-x-2 text-green-600 font-semibold">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                <span>Pague só após receber!</span>
+              </div>
+            </div>
+
           </div>
 
           {/* Right Column - Video */}

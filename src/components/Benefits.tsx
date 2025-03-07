@@ -1,4 +1,3 @@
-import React from 'react';
 import { Moon, Mic, Camera, Wifi, Bell, Smartphone, HardDrive, Shield } from 'lucide-react';
 
 const Benefits = () => {
