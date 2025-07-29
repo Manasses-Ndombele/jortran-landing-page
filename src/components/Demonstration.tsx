@@ -75,10 +75,9 @@ const Demonstration = () => {
           <div className="max-w-4xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <video 
-                className="w-full h-72"
+                className="w-full h-72 object-cover"
+                poster="https://res.cloudinary.com/dl2earg2m/image/upload/v1753825880/poster_ujqvz8.jpg"
                 controls
-                autoPlay
-                loop
                 muted
               >
                 <source 
